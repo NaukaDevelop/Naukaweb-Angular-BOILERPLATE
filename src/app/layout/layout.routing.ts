@@ -1,45 +1,51 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { LayoutInitComponent } from './layout-init/layout-init.component';
-import { NavigationComponent } from './navigation/navigation.component';
 
-const routes: Routes = [{ path: "", redirectTo: "init", pathMatch: "full" },
-{ path: "init", component: NavigationComponent },
-{
-  path: 'crud-a',
-  loadChildren: () =>
-    import('./crud/crud-a/crud-a.module').then((m) => m.CrudAModule),
-},
+import { LayoutComponent } from './layout.component';
 
-{
-  path: 'crud-b',
-  loadChildren: () =>
-    import('./crud/crud-b/crud-b.module').then((m) => m.CrudBModule),
-},
+const routes: Routes = [
+  { path: "", redirectTo: 'nav', pathMatch: "full" },
+  {
+    path: 'nav',
+    loadChildren: () =>
+      import('./nav/nav.module').then((m) => m.NavModule),
+  },
 
-{
-  path: 'crud-c',
-  loadChildren: () =>
-    import('./crud/crud-c/crud-c.module').then((m) => m.CrudCModule),
-},
+  {
+    path: 'crud-a',
+    loadChildren: () =>
+      import('./crud/crud-a/crud-a.module').then((m) => m.CrudAModule),
+  },
 
-{
-  path: 'report-a',
-  loadChildren: () =>
-    import('./reports/report-a/report-a.module').then((m) => m.ReportAModule),
-},
+  {
+    path: 'crud-b',
+    loadChildren: () =>
+      import('./crud/crud-b/crud-b.module').then((m) => m.CrudBModule),
+  },
 
-{
-  path: 'report-b',
-  loadChildren: () =>
-    import('./reports/report-b/report-b.module').then((m) => m.ReportBModule),
-},
+  {
+    path: 'crud-c',
+    loadChildren: () =>
+      import('./crud/crud-c/crud-c.module').then((m) => m.CrudCModule),
+  },
 
-{
-  path: 'report-c',
-  loadChildren: () =>
-    import('./reports/report-c/report-c.module').then((m) => m.ReportCModule),
-}];
+  {
+    path: 'report-a',
+    loadChildren: () =>
+      import('./reports/report-a/report-a.module').then((m) => m.ReportAModule),
+  },
+
+  {
+    path: 'report-b',
+    loadChildren: () =>
+      import('./reports/report-b/report-b.module').then((m) => m.ReportBModule),
+  },
+
+  {
+    path: 'report-c',
+    loadChildren: () =>
+      import('./reports/report-c/report-c.module').then((m) => m.ReportCModule),
+  }];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
