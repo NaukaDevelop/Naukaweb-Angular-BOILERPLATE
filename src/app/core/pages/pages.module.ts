@@ -2,17 +2,17 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { PagesRoutingModule } from './pages.routing';
-import { HomeComponent } from './home/home.component';
-import { NotfoundComponent } from './notfound/notfound.component';
-import { ErrorComponent } from './error/error.component';
-import { ByeComponent } from './bye/bye.component';
-import { AccessDeniedComponent } from './access-denied/access-denied.component';
 
+import { HomeComponent } from './home/home.component';
+import { ByeComponent } from './bye/bye.component';
+
+import { MaterialModule } from 'src/app/core/material/material.module';
 
 @NgModule({
-  declarations: [HomeComponent, NotfoundComponent, ErrorComponent, ByeComponent, AccessDeniedComponent],
+  declarations: [HomeComponent, ByeComponent,],
   imports: [
     CommonModule,
+    MaterialModule,
     PagesRoutingModule
   ]
 })
