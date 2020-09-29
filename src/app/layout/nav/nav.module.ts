@@ -1,29 +1,35 @@
+
+
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+
+import { FormsModule } from '@angular/forms';
 
 import { NavRoutingModule } from './nav.routing';
 import { NavComponent } from './nav/nav.component';
 
-
 import { LayoutModule } from '@angular/cdk/layout';
-import { MatToolbarModule } from '@angular/material/toolbar';
-import { MatButtonModule } from '@angular/material/button';
-import { MatSidenavModule } from '@angular/material/sidenav';
-import { MatIconModule } from '@angular/material/icon';
-import { MatListModule } from '@angular/material/list';
+import { MaterialModule } from 'src/app/core/material/material.module';
+import { SidenavListComponent } from './nav/sidenav-list/sidenav-list.component';
+import { ToolbarListComponent } from './nav/toolbar-list/toolbar-list.component';
+import { StoreSelectorComponent } from './nav/toolbar-list/store-selector/store-selector.component';
+
+
+// Vendor
+import { NgSelectModule } from '@ng-select/ng-select';
+import { BrandLogoComponent } from './nav/brand-logo/brand-logo.component';
+
 
 
 @NgModule({
-  declarations: [NavComponent],
+  declarations: [NavComponent, SidenavListComponent, ToolbarListComponent, StoreSelectorComponent, BrandLogoComponent],
   imports: [
     CommonModule,
+    FormsModule,
     NavRoutingModule,
     LayoutModule,
-    MatToolbarModule,
-    MatButtonModule,
-    MatSidenavModule,
-    MatIconModule,
-    MatListModule
+    MaterialModule,
+    NgSelectModule,
   ],
   exports: [NavComponent]
 })

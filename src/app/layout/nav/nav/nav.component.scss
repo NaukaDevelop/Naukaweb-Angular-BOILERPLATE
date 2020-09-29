@@ -3,7 +3,9 @@
 }
 
 .sidenav {
-  width: 200px;
+  width: 300px;
+  min-width: 200px;
+  max-width: 400px;
 }
 
 .sidenav .mat-toolbar {
@@ -15,3 +17,14 @@
   top: 0;
   z-index: 1;
 }
+
+
+.is-active {
+  background-color: red;
+}
+
+.mat-list-item {
+  background-color: #fefefe;
+  padding: 0;
+  margin: 0;
+  }

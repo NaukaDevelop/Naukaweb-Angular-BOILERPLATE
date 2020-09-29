@@ -1,0 +1,11 @@
+
+    <ng-select [items]="storeList" [dropdownPosition]="'auto'" class="custom"
+               bindLabel="storeName"
+               [searchable]="true" [clearable]="false" [multiple]="false"
+               hideSelected="true"
+               [ngStyle]= "{width:getWidth()}"
+               [(ngModel)]="selectedStore"
+
+
+               (change)="onChangeStore() ">
+    </ng-select>

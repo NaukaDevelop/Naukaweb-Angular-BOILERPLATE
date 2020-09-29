@@ -11,41 +11,47 @@ const routes: Routes = [
       import('./nav/nav.module').then((m) => m.NavModule),
   },
 
-  {
-    path: 'crud-a',
-    loadChildren: () =>
-      import('./crud/crud-a/crud-a.module').then((m) => m.CrudAModule),
-  },
+  // {
+  //   path: 'dashboard',
+  //   loadChildren: () =>
+  //     import('./reports/dahsboard/dahsboard.module').then((m) => m.DahsboardModule),
+  // },
 
-  {
-    path: 'crud-b',
-    loadChildren: () =>
-      import('./crud/crud-b/crud-b.module').then((m) => m.CrudBModule),
-  },
+  // {
+  //   path: 'order-monitor',
+  //   loadChildren: () =>
+  //     import('./reports/order-monitor/order-monitor.module').then((m) => m.OrderMonitorModule),
+  // },
 
-  {
-    path: 'crud-c',
-    loadChildren: () =>
-      import('./crud/crud-c/crud-c.module').then((m) => m.CrudCModule),
-  },
+  // {
+  //   path: 'order-report',
+  //   loadChildren: () =>
+  //     import('./reports/order-report/order-report.module').then((m) => m.OrderReportModule),
+  // },
 
-  {
-    path: 'report-a',
-    loadChildren: () =>
-      import('./reports/report-a/report-a.module').then((m) => m.ReportAModule),
-  },
+  // {
+  //   path: 'order-split',
+  //   loadChildren: () =>
+  //     import('./reports/order-split/order-split.module').then((m) => m.OrderSplitModule),
+  // },
 
-  {
-    path: 'report-b',
-    loadChildren: () =>
-      import('./reports/report-b/report-b.module').then((m) => m.ReportBModule),
-  },
+  // {
+  //   path: 'order-verification',
+  //   loadChildren: () =>
+  //     import('./reports/order-verification/order-verification.module').then((m) => m.OrderVerificationModule),
+  // },
 
-  {
-    path: 'report-c',
-    loadChildren: () =>
-      import('./reports/report-c/report-c.module').then((m) => m.ReportCModule),
-  }];
+  // {
+  //   path: 'product-finder',
+  //   loadChildren: () =>
+  //     import('./reports/product-finder/product-finder.module').then((m) => m.ProductFinderModule),
+  // },
+  // {
+  //   path: 'shipping-validation',
+  //   loadChildren: () =>
+  //     import('./reports/shipping-validation/shipping-validation.module').then((m) => m.ShippingValidationModule),
+  // }
+];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],

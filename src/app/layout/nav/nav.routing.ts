@@ -10,41 +10,55 @@ const routes: Routes = [
 
   {
     path: 'nav', component: NavComponent, children: [
+
       {
-        path: 'crud-a',
+        path: 'dashboard',
         loadChildren: () =>
-          import('../crud/crud-a/crud-a.module').then((m) => m.CrudAModule),
+          import('../reports/dahsboard/dahsboard.module').then((m) => m.DahsboardModule),
       },
 
       {
-        path: 'crud-b',
+        path: 'order-monitor',
         loadChildren: () =>
-          import('../crud/crud-b/crud-b.module').then((m) => m.CrudBModule),
+          import('../reports/order-monitor/order-monitor.module').then((m) => m.OrderMonitorModule),
       },
 
       {
-        path: 'crud-c',
+        path: 'order-report',
         loadChildren: () =>
-          import('../crud/crud-c/crud-c.module').then((m) => m.CrudCModule),
+          import('../reports/order-report/order-report.module').then((m) => m.OrderReportModule),
       },
 
       {
-        path: 'report-a',
+        path: 'order-special',
         loadChildren: () =>
-          import('../reports/report-a/report-a.module').then((m) => m.ReportAModule),
+          import('../reports/order-special/order-special.module').then((m) => m.OrderSpecialModule),
+      },
+
+
+      {
+        path: 'order-split',
+        loadChildren: () =>
+          import('../reports/order-split/order-split.module').then((m) => m.OrderSplitModule),
       },
 
       {
-        path: 'report-b',
+        path: 'order-verification',
         loadChildren: () =>
-          import('../reports/report-b/report-b.module').then((m) => m.ReportBModule),
+          import('../reports/order-verification/order-verification.module').then((m) => m.OrderVerificationModule),
       },
 
       {
-        path: 'report-c',
+        path: 'product-finder',
         loadChildren: () =>
-          import('../reports/report-c/report-c.module').then((m) => m.ReportCModule),
+          import('../reports/product-finder/product-finder.module').then((m) => m.ProductFinderModule),
+      },
+      {
+        path: 'shipping-validation',
+        loadChildren: () =>
+          import('../reports/shipping-validation/shipping-validation.module').then((m) => m.ShippingValidationModule),
       }
+
     ]
   },
 
