@@ -1,1 +1,44 @@
-<p>navigation-sidebar-list works!</p>
+<mat-nav-list dense>
+  <mat-list-item routerLink="/layout/navigation/navigation/dashboard">
+    <mat-icon>dashboard</mat-icon>Dashboard
+  </mat-list-item>
+  <mat-list-item routerLink="/layout/navigation/navigation/order-monitor">
+    <mat-icon>check_box</mat-icon>General
+  </mat-list-item>
+  <mat-list-item routerLink="/layout/navigation/navigation/order-report">
+    <mat-icon>person</mat-icon>Profile
+  </mat-list-item>
+  <mat-list-item routerLink="/layout/navigation/navigation/order-special">
+    <mat-icon>notification_important</mat-icon>Notification
+  </mat-list-item>
+
+
+  <mat-expansion-panel [class.mat-elevation-z0]="true" dense>
+    <mat-expansion-panel-header>
+      Preference
+    </mat-expansion-panel-header>
+    <mat-nav-list dense>
+      <a mat-list-item routerLink="#">
+        <mat-icon>attach_money</mat-icon>Billing
+      </a>
+      <a mat-list-item routerLink="#">
+        <mat-icon>notification_important</mat-icon>Notification
+      </a>
+    </mat-nav-list>
+
+
+  </mat-expansion-panel>
+  <mat-expansion-panel [class.mat-elevation-z0]="true" dense>
+    <mat-expansion-panel-header>
+      Privacy
+    </mat-expansion-panel-header>
+    <mat-nav-list dense>
+      <a mat-list-item routerLink="#">
+        <mat-icon>person_add</mat-icon>Partnership Request
+      </a>
+      <a mat-list-item routerLink="#">
+        <mat-icon>visibility</mat-icon>Profile Visibility
+      </a>
+    </mat-nav-list>
+  </mat-expansion-panel>
+</mat-nav-list>

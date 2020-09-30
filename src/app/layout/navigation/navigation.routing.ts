@@ -6,10 +6,10 @@ import { NavigationComponent } from './navigation.component';
 
 const routes: Routes = [
 
-  { path: "", redirectTo: 'nav', pathMatch: "full" },
+  { path: "", redirectTo: 'navigation', pathMatch: "full" },
 
   {
-    path: 'nav', component: NavigationComponent, children: [
+    path: 'navigation', component: NavigationComponent, children: [
 
       {
         path: 'dashboard',

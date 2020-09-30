@@ -11,6 +11,12 @@ const routes: Routes = [
       import('./nav/nav.module').then((m) => m.NavModule),
   },
 
+  {
+    path: 'navigation',
+    loadChildren: () =>
+      import('./navigation/navigation.module').then((m) => m.NavigationModule),
+  },
+
   // {
   //   path: 'dashboard',
   //   loadChildren: () =>
